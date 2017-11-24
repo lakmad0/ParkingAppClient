@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkingAppClient.Views.AddPlacePage"
+              xmlns:ViewModels="clr-namespace:ParkingAppClient.ViewModels">
+
+    <ContentPage.BindingContext>
+        <ViewModels:AddNewPlaceViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout VerticalOptions="Center">
+        <Entry Text="{Binding PlaceName}" Placeholder="placename"/>
+        <Entry Text="{Binding Address}" Placeholder="address"/>
+        <Entry Text="{Binding Longitude}" Placeholder="longitude"/>
+        <Entry Text="{Binding Latitude}" Placeholder="lattitude"/>
+        <Entry Text="{Binding MaxSlots}" Placeholder="maxslots"/>
+
+        <Button Command="{Binding AddCommand}"
+                Text="Add Place"/>
+
+    </StackLayout>
+   
+</ContentPage>
