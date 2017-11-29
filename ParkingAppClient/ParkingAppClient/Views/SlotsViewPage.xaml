@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkingAppClient.Views.SlotsViewPage"
+             xmlns:ViewModels="clr-namespace:ParkingAppClient.ViewModels">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Icon="ic_action_new.png" Clicked="AddNewPlace"/>
+        <!--<ToolbarItem Text="Add" Icon="ic_action_new.png" Clicked="AddParkingPlace"/>-->
+        <ToolbarItem x:Name="refreshButton" Text="Refresh" Icon="ic_autorenew.png" Command="{Binding GetSlotsViewsList}"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.BindingContext>
+        <ViewModels:SlotsViewViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <ListView x:Name="MyPageName" ItemsSource="{Binding SlotsViews}" HasUnevenRows="true" ItemTapped="OnEditSlots">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell Height='100'>
+                    <StackLayout>
+                        <Label Text="{Binding PlaceName}" FontSize="20"/>
+                        <Label Text="{Binding FreeSlots}" FontSize="40" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <ViewCell.ContextActions>
+                        <MenuItem Clicked="Edit_Place"
+                                CommandParameter="{Binding}"
+                                Text="Edit" IsDestructive="True" />
+                        <MenuItem Clicked="DeleteItem_Clicked"
+                                CommandParameter="{Binding}"
+                                Text="Delete" IsDestructive="True" />
+                    </ViewCell.ContextActions>
+                    <!--<ViewCell.ContextActions>
+                        <MenuItem Command="{Binding Path=BindingContext.DeleteListCommand, Source={x:Reference Name=MyPageName}}" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True"/>
+                        --><!--<MenuItem Command="{Binding DeleteCommand}" Text="Delete" IsDestructive="True" />--><!--
+                    </ViewCell.ContextActions>-->
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

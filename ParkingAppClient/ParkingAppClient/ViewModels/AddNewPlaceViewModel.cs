@@ -23,7 +23,7 @@ namespace ParkingAppClient.ViewModels
 
         public double Latitude { get; set; }
 
-        public int MaxSlots { get; set; }
+        public string MaxSlots { get; set; }
 
         public string Message { get; set; }
 
@@ -39,7 +39,7 @@ namespace ParkingAppClient.ViewModels
                         Address = this.Address,
                         Longitude = this.Longitude,
                         Latitude = this.Latitude,
-                        MaxSlots = this.MaxSlots
+                        MaxSlots = Int32.Parse(this.MaxSlots),
                     };
 
                     var isSuccess = await services.PostPlaceAsync(Settings.AccessToken, place);

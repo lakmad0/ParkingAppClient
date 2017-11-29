@@ -14,6 +14,7 @@ namespace ParkingAppClient.Services
 {
     public class LoginApiServices
     {
+        string url = "http://10.2.3.93:45455/";
         public async Task<bool> RegisterAsync(string email, string password, string confirmPassword)
         {
             var client = new HttpClient();
@@ -31,7 +32,7 @@ namespace ParkingAppClient.Services
 
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var response = await client.PostAsync("http://10.2.4.139:45456/api/Account/Register", content);
+            var response = await client.PostAsync(url + "api/Account/Register", content);
 
             return response.IsSuccessStatusCode;
         }
@@ -45,7 +46,7 @@ namespace ParkingAppClient.Services
                 new KeyValuePair<string, string>("grant_type", "password")
             };
 
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://10.2.4.139:45456/Token");
+            var request = new HttpRequestMessage(HttpMethod.Post, url + "Token");
 
             request.Content = new FormUrlEncodedContent(keyValues);
 

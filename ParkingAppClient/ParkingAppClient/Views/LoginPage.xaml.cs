@@ -19,7 +19,13 @@ namespace ParkingAppClient.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlacesPage());
+            //await Navigation.PushAsync(new PlacesPage());
+            await Navigation.PushAsync(new SlotsViewPage());
         }
+
+        //private async void LoginButtonClicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new PlacesPage());
+        //}
     }
 }

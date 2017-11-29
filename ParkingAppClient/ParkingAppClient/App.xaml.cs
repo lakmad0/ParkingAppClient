@@ -2,6 +2,7 @@
 using ParkingAppClient.Views;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -20,11 +21,7 @@ namespace ParkingAppClient
 
         private void SetMainPage()
         {
-            if (!string.IsNullOrEmpty(Settings.AccessToken))
-            {
-                MainPage = new NavigationPage(new PlacesPage());
-            }
-            else if (!string.IsNullOrEmpty(Settings.Username) && !string.IsNullOrEmpty(Settings.Password))
+            if (!string.IsNullOrEmpty(Settings.Username) && !string.IsNullOrEmpty(Settings.Password))
             {
                 MainPage = new NavigationPage(new LoginPage());
             }
@@ -42,10 +39,13 @@ namespace ParkingAppClient
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            Debug.WriteLine("your app is sleeping");
+            Settings.AccessToken = null;
         }
 
         protected override void OnResume()
         {
+            Debug.WriteLine("your app is resuming");
             // Handle when your app resumes
         }
     }

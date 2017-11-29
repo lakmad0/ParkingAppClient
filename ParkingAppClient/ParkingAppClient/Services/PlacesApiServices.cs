@@ -12,12 +12,14 @@ namespace ParkingAppClient.Services
 {
     public class PlacesApiServices
     {
+        string url = "http://10.2.3.93:45455/api/Places/";
+
         public async Task<List<Place>> GetPlacesAsync(string accessToken)
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
-            var response = await client.GetStringAsync("http://10.2.4.139:45456/api/Places");
+            var response = await client.GetStringAsync(url);
 
             var places = JsonConvert.DeserializeObject<List<Place>>(response);
 
@@ -29,7 +31,7 @@ namespace ParkingAppClient.Services
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
-            var response = await client.GetStringAsync("http://10.2.4.139:45456/api/Places/"+id.ToString());
+            var response = await client.GetStringAsync(url + id.ToString());
 
             var place = JsonConvert.DeserializeObject<Place>(response);
 
@@ -47,9 +49,35 @@ namespace ParkingAppClient.Services
 
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var response = await client.PostAsync("http://10.2.4.139:45456/api/Places", content);
+            var response = await client.PostAsync(url, content);
 
             return response.IsSuccessStatusCode;
-        }       
+        }
+
+        public async Task<bool> PutPlaceAsync(string accessToken, Place place)
+        {
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+            var json = JsonConvert.SerializeObject(place);
+
+            HttpContent content = new StringContent(json);
+
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            var response = await client.PutAsync(url + place.Id, content);
+
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> DeletePlaceAsync(string accessToken, string id)
+        {
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+            var response = await client.DeleteAsync(url + id);
+
+            return response.IsSuccessStatusCode;
+        }
     }
 }
