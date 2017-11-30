@@ -23,7 +23,7 @@ namespace ParkingAppClient.Views
             InitializeComponent();
         }
 
-        async void EditLocation(object sender, EventArgs e)
+        void EditLocation(object sender, EventArgs e)
         {
         }
 

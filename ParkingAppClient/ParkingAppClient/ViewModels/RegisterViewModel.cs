@@ -1,5 +1,6 @@
 ﻿using ParkingAppClient.Helpers;
 using ParkingAppClient.Services;
+using ParkingAppClient.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace ParkingAppClient.ViewModels
     {
         LoginApiServices loginservices = new LoginApiServices();
 
-        
+        public INavigation Navigation;
 
         public string Email { get; set; }
 
@@ -58,6 +59,7 @@ namespace ParkingAppClient.ViewModels
                         IsRegirerSuccess = isSuccess;
                         Settings.Username = Email;
                         Settings.Password = Password;
+                        await Navigation.PushAsync(new LoginPage(new LoginViewModel()));
                         //Navigation.PushAsync(new LoginPage());
                     }
                     else

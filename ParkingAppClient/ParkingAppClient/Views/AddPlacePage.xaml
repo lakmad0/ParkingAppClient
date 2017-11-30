@@ -9,11 +9,20 @@
     </ContentPage.BindingContext>
 
     <StackLayout VerticalOptions="StartAndExpand">
-        <Entry Text="{Binding PlaceName}" Placeholder="placename"/>
-        <Entry Text="{Binding Address}" Placeholder="address"/>
-        <Entry x:Name="max" Text="{Binding MaxSlots}" Placeholder="maxslots"/>
-        <Entry x:Name="lotude" Text="{Binding Longitude}" Placeholder="longitude" IsEnabled="False"/>
-        <Entry x:Name="latude" Text="{Binding Latitude}" Placeholder="lattitude" IsEnabled="False"/>
+
+        <TableView>
+            <TableView.Root>
+                <TableSection>
+                    <EntryCell x:Name="placeName" Label="PlaceName" Text="{Binding PlaceName, Mode=TwoWay}" Placeholder="PlaceName"/>
+                    <EntryCell x:Name="address" Label="Address" Text="{Binding Address, Mode=TwoWay}" Placeholder="Address"/>
+                    <EntryCell x:Name="max" Label="MaxSlots" Text="{Binding MaxSlots, Mode=TwoWay}" Placeholder="MaxSlots"/>
+                    <EntryCell x:Name="lotude" Label="Longitude" Text="{Binding Longitude, Mode=TwoWay}" Placeholder="Longitude" IsEnabled="False"/>
+                    <EntryCell x:Name="latude" Label="Latitude" Text="{Binding Latitude, Mode=TwoWay}" Placeholder="Latitude" IsEnabled="False"/>
+                    
+
+                </TableSection>
+            </TableView.Root>
+        </TableView>
 
 
         <Button Text="Add Location" Clicked="AddLocation"/>

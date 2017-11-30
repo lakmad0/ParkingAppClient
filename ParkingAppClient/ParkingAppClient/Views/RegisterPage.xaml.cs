@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParkingAppClient.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +13,19 @@ namespace ParkingAppClient.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
-        public RegisterPage()
+        public RegisterPage(RegisterViewModel viewModel)
         {
+            viewModel.Navigation = Navigation;
+            BindingContext = viewModel;
+
             InitializeComponent();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginPage());
+        //private async void Button_Clicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new LoginPage());
 
-        }
+        //}
         
     }
 }

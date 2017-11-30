@@ -1,4 +1,5 @@
 ﻿using ParkingAppClient.Helpers;
+using ParkingAppClient.ViewModels;
 using ParkingAppClient.Views;
 using System;
 using System.Collections.Generic;
@@ -21,13 +22,20 @@ namespace ParkingAppClient
 
         private void SetMainPage()
         {
-            if (!string.IsNullOrEmpty(Settings.Username) && !string.IsNullOrEmpty(Settings.Password))
+            if (!string.IsNullOrEmpty(Settings.AccessToken))
             {
-                MainPage = new NavigationPage(new LoginPage());
+                var viewModel = new LoginViewModel();
+                MainPage = new NavigationPage(new LoginPage(viewModel));
+            }
+            else if (!string.IsNullOrEmpty(Settings.Username) && !string.IsNullOrEmpty(Settings.Password))
+            {
+                var viewModel = new LoginViewModel();
+                MainPage = new NavigationPage(new LoginPage(viewModel));
             }
             else
             {
-                MainPage = new NavigationPage(new RegisterPage());
+                var viewModel = new RegisterViewModel();
+                MainPage = new NavigationPage(new RegisterPage(viewModel));
             }
         }
 
@@ -40,7 +48,7 @@ namespace ParkingAppClient
         {
             // Handle when your app sleeps
             Debug.WriteLine("your app is sleeping");
-            Settings.AccessToken = null;
+            //Settings.AccessToken = null;
         }
 
         protected override void OnResume()

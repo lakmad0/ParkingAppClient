@@ -1351,43 +1351,46 @@ namespace ParkingAppClient.Droid
 		{
 			
 			// aapt resource value: 0x7f070053
-			public const int abc_background_cache_hint_selector_material_dark = 2131165267;
+			public const int ListViewHighlighted = 2131165267;
 			
 			// aapt resource value: 0x7f070054
-			public const int abc_background_cache_hint_selector_material_light = 2131165268;
+			public const int abc_background_cache_hint_selector_material_dark = 2131165268;
 			
 			// aapt resource value: 0x7f070055
-			public const int abc_btn_colored_borderless_text_material = 2131165269;
+			public const int abc_background_cache_hint_selector_material_light = 2131165269;
 			
 			// aapt resource value: 0x7f070056
-			public const int abc_btn_colored_text_material = 2131165270;
+			public const int abc_btn_colored_borderless_text_material = 2131165270;
 			
 			// aapt resource value: 0x7f070057
-			public const int abc_color_highlight_material = 2131165271;
+			public const int abc_btn_colored_text_material = 2131165271;
 			
 			// aapt resource value: 0x7f070058
-			public const int abc_hint_foreground_material_dark = 2131165272;
+			public const int abc_color_highlight_material = 2131165272;
 			
 			// aapt resource value: 0x7f070059
-			public const int abc_hint_foreground_material_light = 2131165273;
+			public const int abc_hint_foreground_material_dark = 2131165273;
+			
+			// aapt resource value: 0x7f07005a
+			public const int abc_hint_foreground_material_light = 2131165274;
 			
 			// aapt resource value: 0x7f07000c
 			public const int abc_input_method_navigation_guard = 2131165196;
 			
-			// aapt resource value: 0x7f07005a
-			public const int abc_primary_text_disable_only_material_dark = 2131165274;
-			
 			// aapt resource value: 0x7f07005b
-			public const int abc_primary_text_disable_only_material_light = 2131165275;
+			public const int abc_primary_text_disable_only_material_dark = 2131165275;
 			
 			// aapt resource value: 0x7f07005c
-			public const int abc_primary_text_material_dark = 2131165276;
+			public const int abc_primary_text_disable_only_material_light = 2131165276;
 			
 			// aapt resource value: 0x7f07005d
-			public const int abc_primary_text_material_light = 2131165277;
+			public const int abc_primary_text_material_dark = 2131165277;
 			
 			// aapt resource value: 0x7f07005e
-			public const int abc_search_url_text = 2131165278;
+			public const int abc_primary_text_material_light = 2131165278;
+			
+			// aapt resource value: 0x7f07005f
+			public const int abc_search_url_text = 2131165279;
 			
 			// aapt resource value: 0x7f07000d
 			public const int abc_search_url_text_normal = 2131165197;
@@ -1398,29 +1401,29 @@ namespace ParkingAppClient.Droid
 			// aapt resource value: 0x7f07000f
 			public const int abc_search_url_text_selected = 2131165199;
 			
-			// aapt resource value: 0x7f07005f
-			public const int abc_secondary_text_material_dark = 2131165279;
-			
 			// aapt resource value: 0x7f070060
-			public const int abc_secondary_text_material_light = 2131165280;
+			public const int abc_secondary_text_material_dark = 2131165280;
 			
 			// aapt resource value: 0x7f070061
-			public const int abc_tint_btn_checkable = 2131165281;
+			public const int abc_secondary_text_material_light = 2131165281;
 			
 			// aapt resource value: 0x7f070062
-			public const int abc_tint_default = 2131165282;
+			public const int abc_tint_btn_checkable = 2131165282;
 			
 			// aapt resource value: 0x7f070063
-			public const int abc_tint_edittext = 2131165283;
+			public const int abc_tint_default = 2131165283;
 			
 			// aapt resource value: 0x7f070064
-			public const int abc_tint_seek_thumb = 2131165284;
+			public const int abc_tint_edittext = 2131165284;
 			
 			// aapt resource value: 0x7f070065
-			public const int abc_tint_spinner = 2131165285;
+			public const int abc_tint_seek_thumb = 2131165285;
 			
 			// aapt resource value: 0x7f070066
-			public const int abc_tint_switch_track = 2131165286;
+			public const int abc_tint_spinner = 2131165286;
+			
+			// aapt resource value: 0x7f070067
+			public const int abc_tint_switch_track = 2131165287;
 			
 			// aapt resource value: 0x7f070010
 			public const int accent_material_dark = 2131165200;
@@ -1476,8 +1479,8 @@ namespace ParkingAppClient.Droid
 			// aapt resource value: 0x7f07000b
 			public const int cardview_shadow_start_color = 2131165195;
 			
-			// aapt resource value: 0x7f070067
-			public const int common_google_signin_btn_text_dark = 2131165287;
+			// aapt resource value: 0x7f070068
+			public const int common_google_signin_btn_text_dark = 2131165288;
 			
 			// aapt resource value: 0x7f070000
 			public const int common_google_signin_btn_text_dark_default = 2131165184;
@@ -1491,8 +1494,8 @@ namespace ParkingAppClient.Droid
 			// aapt resource value: 0x7f070003
 			public const int common_google_signin_btn_text_dark_pressed = 2131165187;
 			
-			// aapt resource value: 0x7f070068
-			public const int common_google_signin_btn_text_light = 2131165288;
+			// aapt resource value: 0x7f070069
+			public const int common_google_signin_btn_text_light = 2131165289;
 			
 			// aapt resource value: 0x7f070004
 			public const int common_google_signin_btn_text_light_default = 2131165188;
@@ -1506,14 +1509,14 @@ namespace ParkingAppClient.Droid
 			// aapt resource value: 0x7f070007
 			public const int common_google_signin_btn_text_light_pressed = 2131165191;
 			
-			// aapt resource value: 0x7f070069
-			public const int common_google_signin_btn_tint = 2131165289;
+			// aapt resource value: 0x7f07006a
+			public const int common_google_signin_btn_tint = 2131165290;
 			
 			// aapt resource value: 0x7f070048
 			public const int design_bottom_navigation_shadow_color = 2131165256;
 			
-			// aapt resource value: 0x7f07006a
-			public const int design_error = 2131165290;
+			// aapt resource value: 0x7f07006b
+			public const int design_error = 2131165291;
 			
 			// aapt resource value: 0x7f070049
 			public const int design_fab_shadow_end_color = 2131165257;
@@ -1539,8 +1542,8 @@ namespace ParkingAppClient.Droid
 			// aapt resource value: 0x7f070050
 			public const int design_snackbar_background_color = 2131165264;
 			
-			// aapt resource value: 0x7f07006b
-			public const int design_tint_password_toggle = 2131165291;
+			// aapt resource value: 0x7f07006c
+			public const int design_tint_password_toggle = 2131165292;
 			
 			// aapt resource value: 0x7f07001e
 			public const int dim_foreground_disabled_material_dark = 2131165214;
@@ -1662,11 +1665,11 @@ namespace ParkingAppClient.Droid
 			// aapt resource value: 0x7f070042
 			public const int switch_thumb_disabled_material_light = 2131165250;
 			
-			// aapt resource value: 0x7f07006c
-			public const int switch_thumb_material_dark = 2131165292;
-			
 			// aapt resource value: 0x7f07006d
-			public const int switch_thumb_material_light = 2131165293;
+			public const int switch_thumb_material_dark = 2131165293;
+			
+			// aapt resource value: 0x7f07006e
+			public const int switch_thumb_material_light = 2131165294;
 			
 			// aapt resource value: 0x7f070043
 			public const int switch_thumb_normal_material_dark = 2131165251;
@@ -4423,6 +4426,9 @@ namespace ParkingAppClient.Droid
 			
 			// aapt resource value: 0x7f0c019b
 			public const int AppCompatDialogStyle = 2131493275;
+			
+			// aapt resource value: 0x7f0c019c
+			public const int AppStyle_Light = 2131493276;
 			
 			// aapt resource value: 0x7f0c00b1
 			public const int Base_AlertDialog_AppCompat = 2131493041;

@@ -52,12 +52,7 @@ namespace ParkingAppClient.Views
                 {
                     PlacesApiServices service = new PlacesApiServices();
                     await service.DeletePlaceAsync(Settings.AccessToken, slot.PlaceId.ToString());
-                    //SlotsViews = MyPageName.BindingContext;
                     MyPageName.IsPullToRefreshEnabled = true;
-                    //BindingContext = SlotsViews;
-                    //MyPageName.
-                    //await manager.Delete(slot.PlaceId);
-                    //slotsview.Remove(slot);
                 }
             }
         }

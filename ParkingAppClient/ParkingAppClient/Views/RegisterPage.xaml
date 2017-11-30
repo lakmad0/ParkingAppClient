@@ -14,7 +14,7 @@
         <Entry Text="{Binding ConfirmPassword}" Placeholder="confirmPassword" IsPassword="True"/>
 
         <Button Command="{Binding RegisterCommand}" Text="Register"/>
-        <Button Text="Login" Clicked="Button_Clicked" IsEnabled="{Binding IsRegirerSuccess}"/>
+        <!--<Button Text="Login" Clicked="Button_Clicked" IsEnabled="{Binding IsRegirerSuccess}"/>-->
     </StackLayout>
          
 </ContentPage>

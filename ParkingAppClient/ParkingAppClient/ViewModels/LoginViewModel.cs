@@ -1,5 +1,6 @@
 ﻿using ParkingAppClient.Helpers;
 using ParkingAppClient.Services;
+using ParkingAppClient.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace ParkingAppClient.ViewModels
     public class LoginViewModel
     {
         LoginApiServices loginservices = new LoginApiServices();
+
+        public INavigation Navigation;
 
         public string UserName { get; set; }
 
@@ -33,6 +36,8 @@ namespace ParkingAppClient.ViewModels
                 {
                     var accessToken = await loginservices.LoginAsync(UserName, Password);
                     Settings.AccessToken = accessToken;
+
+                    await Navigation.PushAsync(new SlotsViewPage());
                 });
             }
         }

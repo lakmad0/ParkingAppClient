@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ParkingAppClient.Views.LoginPage"
              xmlns:ViewModels="clr-namespace:ParkingAppClient.ViewModels">
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <ViewModels:LoginViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
 
     <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30" Spacing="30">
         <Entry Text="{Binding UserName}" Placeholder="username" FontSize="30"/>
         <Entry Text="{Binding Password}" Placeholder="password" IsPassword="True" FontSize="30"/>
 
-        <Button Command="{Binding LoginCommand}" Text="Login" BackgroundColor="DodgerBlue" FontSize="30" TextColor="White" Clicked="Button_Clicked"/>
+        <Button Command="{Binding LoginCommand}" Text="Login" BackgroundColor="DodgerBlue" FontSize="30" TextColor="White"/>
         <!--<Button Text="SlotsView Page" Clicked="Button_Clicked"/>-->
     </StackLayout>
 </ContentPage>

@@ -15,7 +15,7 @@
     </ContentPage.BindingContext>
 
 
-    <ListView x:Name="MyPageName" ItemsSource="{Binding SlotsViews}" HasUnevenRows="true" ItemTapped="OnEditSlots">
+    <ListView x:Name="MyPageName" ItemsSource="{Binding SlotsViews}" HasUnevenRows="true" ItemTapped="OnEditSlots" >
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell Height='100'>
@@ -26,7 +26,8 @@
                     <ViewCell.ContextActions>
                         <MenuItem Clicked="Edit_Place"
                                 CommandParameter="{Binding}"
-                                Text="Edit" IsDestructive="True" />
+                                Text="Edit" IsDestructive="True" 
+                                  />
                         <MenuItem Clicked="DeleteItem_Clicked"
                                 CommandParameter="{Binding}"
                                 Text="Delete" IsDestructive="True" />
